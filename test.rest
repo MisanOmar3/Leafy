@@ -17,3 +17,32 @@ Content-Type: application/json
 Authorization: Token 1a38ed2ad9519c14ef806b2d41e0349050ba612b
 
 {}
+
+###
+POST http://localhost:8000/books/create/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzODUyNzEzLCJpYXQiOjE3MzM4NTI0MTMsImp0aSI6ImQxMzMzYWY4ZjQ4MTQ0NmQ5YzI3OGY1ZTcwNzEwZTE0IiwidXNlcl9pZCI6MX0.Ok6EvqkawKiRmzowzpSCL-6MhsqltakzOpDWqoJlhNE
+
+{
+    "title":"The Wanderer",
+    "description": "...Just the diary of a lone man wondering the endless plains of a dead world."
+}
+
+
+###
+GET http://localhost:8000/books/1/detail/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzODU3NjU3LCJpYXQiOjE3MzM4NTczNTcsImp0aSI6ImNkZWYwMjdkODY2ZTQ3NjA5MDE2OWE4ZjQ2YzdlYjY2IiwidXNlcl9pZCI6MX0.33OpKIko1nO4UG6FsqavCJMTlqrCfpqTJI63-iYt6mc
+
+{}
+
+###
+POST http://localhost:8000/chapters/create/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzODU2NDE0LCJpYXQiOjE3MzM4NTYxMTQsImp0aSI6Ijc2ZjFjMDBjZDVhMTRkZWI4YWRhZjUxZDcxYTJmZjc3IiwidXNlcl9pZCI6MX0.sIWy2Izqh0jOYrnxxXwXoJ2a2qsjs98Z055cdm60bG8
+
+{
+    "title":"Prologue",
+    "body":"Well, this is interesting. \nI've been walking for almost a year now. I've seen everything there is to see; but I've never seen this...",
+    "book":1
+}
